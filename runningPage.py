@@ -11,6 +11,9 @@ pages = {
     ],
     "frontend":[
         streamlit.Page("4.HTMX.py",title="HTMX")
+    ],
+    "others":[
+        streamlit.Page("5.telegrambotAPI.py",title="telegramBot_API")
     ]
 }
 streamlit.navigation(pages=pages).run()
