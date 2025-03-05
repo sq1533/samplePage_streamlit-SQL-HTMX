@@ -3,7 +3,6 @@ import streamlit
 streamlit.header(body="HTMX")
 
 streamlit.subheader(body="tigger")
-streamlit.code()
 
 streamlit.subheader(body="AJAX처리 get / post / put / patch / delete")
 streamlit.write("""
@@ -12,16 +11,11 @@ streamlit.write("""
                 """)
 streamlit.code(body=
                 """
-                <head>
-                <script src="https://unpkg.com/htmx.org@2.0.4/dist/htmx.min.js"></script>
-                <head>
-                <body>
-                    <form hx-patch='/patchData' hx-target='#output' hx-swap='innerHTML'>
-                        <input type='text' name='inputText'>
-                        <button type='submit'>전송</button>
-                    </form>
-                    <div id='output'></div>
-                </body>
+                <form hx-patch='/patchData' hx-target='#output' hx-swap='innerHTML'>
+                    <input type='text' name='inputText'>
+                    <button type='submit'>전송</button>
+                </form>
+                <div id='output'></div>
                 """)
 streamlit.write("""
                 이해를 돕기위해 backend는 Fast API로 작성.\n
