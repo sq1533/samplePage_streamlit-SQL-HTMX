@@ -5,24 +5,26 @@ import random
 #streamlit 기능 및 데이터 시각화
 streamlit.title(body=":green[든든동규] 개발 온몸비틀기")
 streamlit.subheader(body=":red[streamlit] 데이터 시각화")
+streamlit.divider()
+
 #그래프_비즈
 streamlit.header(body="그래프_비즈")
 streamlit.graphviz_chart(
     """
     digraph {
-    fullstack -> backend
-    backend -> SQL
-    backend -> NoSQL
-    backend -> Restfull_API
-    SQL -> PostgreSQL
-    NoSQL -> MongoDB
     fullstack -> frontend
-    frontend -> HTMX
+    fullstack -> backend
     frontend -> tailwindcss
-    HTMX -> Restfull_API
-    HTMX -> HTML
-    HTMX -> CDN
-    tailwindcss -> CDN
+    frontend -> HTMX
+    tailwindcss -> UX,UI
+    HTMX -> AJAX
+    HTMX -> APIserver
+    backend -> Fast_API
+    Fast_API -> APIserver
+    Rest_API -> Fast_API
+    APIserver -> HTMX
+    APIserver -> DataBase
+    DataBase -> APIserver
     }
     """
 )
