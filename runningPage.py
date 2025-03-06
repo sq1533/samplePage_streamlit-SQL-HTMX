@@ -6,8 +6,8 @@ pages = {
         streamlit.Page("1.home.py",title="메인 페이지")
     ],
     "backend":[
-        streamlit.Page("2.SQL.py",title="SQL"),
-        streamlit.Page("3.SQL기본문법.py",title="SQL 기본문법")
+        streamlit.Page("2.DB.py",title="DataBase"),
+        streamlit.Page("3.SQL.py",title="SQL")
     ],
     "frontend":[
         streamlit.Page("4.HTMX.py",title="HTMX")
