@@ -29,9 +29,9 @@ if streamlit.button(label='조회',key='chatID'):
 streamlit.code(body=
                 """
                 inputAPI = streamlit.text_input(label='bot_API',
-                                    value='',
-                                    key='botAPI_chatID',
-                                    placeholder='telegramBotAPI 입력')
+                                                value='',
+                                                key='botAPI_chatID',
+                                                placeholder='telegramBotAPI 입력')
 
                 if streamlit.button(label='조회',key='chatID'):
                     response = requests.get(url=f'https://api.telegram.org/bot{inputAPI}/getUpdates')
